@@ -24,16 +24,66 @@
         "strip_text": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
       }
     },
-    "custom_product_grid_3yxiTx": {
+
+    "grid": {
       "type": "custom-product-grid",
       "name": "Gift Guide Grid (Custom)",
       "settings": {
         "heading-text": "Tisso vision in the wild"
-      }
+      },
+
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_5": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_6": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+
+      "block_order": [
+        "product_1",
+        "product_2",
+        "product_3",
+        "product_4",
+        "product_5",
+        "product_6"
+      ]
     }
   },
+
   "order": [
     "banner",
-    "custom_product_grid_3yxiTx"
+    "grid"
   ]
 }
