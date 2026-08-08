@@ -1,0 +1,198 @@
+/* gift-guide-banner.css */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap');
+
+* {
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 0;
+}
+
+/* ================= Announcement Bars ================= */
+.gg-announcement {
+  width: 100%;
+  /* height: 64px; */
+}
+
+.gg-announcement__bar {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #F5F5F5;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.gg-announcement__msg {
+  font-weight: 400;
+  color: #000;
+  font-size: 16px;
+  justify-content: center;
+}
+
+.gg-bottom-bar {
+  justify-content: center;
+  padding: 2px 0;
+}
+
+/* ================= Buttons ================= */
+.gg-btn,
+.gg-shop-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  font-weight: 400;
+  border: none;
+  position: relative;
+  transition: all 0.4s ease-out;
+  text-decoration:none;
+}
+
+.gg-btn {
+  background-color: #FFF554;
+  color: #000;
+}
+
+.gg-btn:hover {
+  background-color: #000;
+  color: #FFF;
+}
+
+.gg-shop-btn {
+  width: 220px;
+  height: 50px;
+  background-color: #000;
+  color: #FFF;
+}
+
+.gg-shop-btn:hover {
+  background-color: #FFF554;
+  color: #000;
+}
+
+/* ================= Banner Section ================= */
+.gg-banner-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.banner-section-textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+  justify-content: center;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 40px;
+  color: #000;
+}
+
+.subheading {
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+}
+
+.banner-section-imagearea {
+  width: 60%;
+}
+
+.subtext-section{
+  gap: 0px;
+}
+
+/* ================= Mobile Responsive  ================= */
+@media (max-width: 768px) {
+  /* Top announcement bar */
+  .gg-announcement__bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    text-align: center;
+    height: auto;
+    padding: 12px 10px;
+  }
+
+  .gg-announcement__msg,
+  .gg-btn,
+  .gg-banner-bg{
+    display:none;
+  }
+
+  /* Banner: stack vertically */
+  .banner-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .banner-section-textarea {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 15px;
+    gap: 12px;
+  }
+
+  .heading {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .subheading {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .gg-shop-btn {
+    width: auto;
+    min-width: 160px;
+    height: 45px;
+    margin: 0 auto;
+  }
+
+  .banner-section-imagearea {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .banner-section-imagearea img {
+    width: 100%;
+    height: auto;
+  }
+
+  .subtext2{
+    display: none;
+  }
+}
+
+/* Extra small devices (phones under 480px) */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 26px;
+  }
+
+  .subheading {
+    font-size: 14px;
+  }
+
+  .gg-btn,
+  .gg-shop-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+  .brand_text{
+    justify-content:center;
+    align-items:center;
+  }
+}
