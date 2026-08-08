@@ -1,1 +1,39 @@
-{"sections":{"banner":{"type":"custom-gift-banner","settings":{"brand_text":"TISSO VISON","announce_text":"Find the ideal gift for your loved ones.","announce_button_label":"CHOOSE GIFT","announce_button_url":"","heading":"The Gift Guide","subtext1":"Discover Joy: Your Ultimate Holiday Gift Destination.","subtext2":"Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.","shop_button_label":"SHOP NOW","shop_button_url":"","strip_text":"SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"}},"custom_product_grid_3yxiTx":{"type":"custom-product-grid","name":"Gift Guide Grid (Custom)","settings":{"heading-text":"Tisso vision in the wild"}}},"order":["banner","custom_product_grid_3yxiTx"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "custom-gift-banner",
+      "settings": {
+        "brand_text": "TISSO VISON",
+        "announce_text": "Find the ideal gift for your loved ones.",
+        "announce_button_label": "CHOOSE GIFT",
+        "announce_button_url": "",
+        "heading": "The Gift Guide",
+        "subtext1": "Discover Joy: Your Ultimate Holiday Gift Destination.",
+        "subtext2": "Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
+        "shop_button_label": "SHOP NOW",
+        "shop_button_url": "",
+        "strip_text": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+      }
+    },
+    "custom_product_grid_3yxiTx": {
+      "type": "custom-product-grid",
+      "name": "Gift Guide Grid (Custom)",
+      "settings": {
+        "heading-text": "Tisso vision in the wild"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "custom_product_grid_3yxiTx"
+  ]
+}
