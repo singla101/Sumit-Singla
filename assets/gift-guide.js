@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+  if (window.giftGuideInitialized) return;
+window.giftGuideInitialized = true;
   const plusIcons = document.querySelectorAll('.plus-icon');
   const modal = document.getElementById('productModal');
   const closeModal = modal.querySelector('.close');
@@ -112,70 +114,49 @@ sizeSelect.addEventListener("change", function() {
 });
 
 /** --- Add to cart --- */
-let isAddingToCart = false;
-
-addToCartBtn.addEventListener("click", async function() {
-
-  if (isAddingToCart) return;
-  isAddingToCart = true;
-
-  try {
-
+addToCartBtn.addEventListener("click", function() {
     if (!selectedColor || !selectedSize) {
       alert("Please select both color and size");
       return;
     }
 
-    const variant = currentVariants.find(
-      v => v.option1 === selectedSize &&
-           v.option2 === selectedColor
-    );
-
+    const variant = currentVariants.find(v => v.option1 === selectedSize && v.option2 === selectedColor);
     if (!variant) {
       alert("That combination is not available.");
       return;
     }
 
-    const items = [
-      {
-        id: variant.id,
-        quantity: 1
-      }
-    ];
-
-    if (
-      selectedSize.toLowerCase() === "m" &&
-      selectedColor.toLowerCase() === "black"
-    ) {
-      items.push({
-        id: ADDON_VARIANT_ID,
-        quantity: 1
-      });
-    }
-
-    const response = await fetch('/cart/add.js', {
+    // Step 1: Add the main product
+    fetch('/cart/add.js', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({ items })
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ id: variant.id, quantity: 1 })
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log("Main product added:", data, selectedSize, selectedColor);
+
+      // Step 2: Condition → Auto add accessory
+      if (selectedSize.toLowerCase() === "m" && selectedColor.toLowerCase() === "black") {
+        return fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ id: ADDON_VARIANT_ID, quantity: 1 })
+        });
+      }
+    })
+    .then(res => res ? res.json() : null)
+    .then(addon => {
+      if (addon) console.log("Addon added:", addon);
+      alert("Item(s) added to cart!");
+      modal.style.display = 'none';
+    })
+    .catch(err => {
+      console.error("Error:", err);
+      alert("Something went wrong. Please try again.");
     });
+  });
 
-    const data = await response.json();
-
-    console.log("Added:", data);
-
-    alert("Item(s) added to cart!");
-    modal.style.display = 'none';
-
-  } catch (err) {
-    console.error(err);
-    alert("Something went wrong. Please try again.");
-  } finally {
-    isAddingToCart = false;
-  }
-});
 
   /** ---------------- Close modal ---------------- */
   closeModal.addEventListener('click', () => { modal.style.display = 'none'; });
