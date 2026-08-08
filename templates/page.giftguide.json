@@ -24,64 +24,60 @@
         "strip_text": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
       }
     },
-
     "grid": {
       "type": "custom-product-grid",
-      "name": "Gift Guide Grid (Custom)",
-      "settings": {
-        "heading-text": "Tisso vision in the wild"
-      },
-
       "blocks": {
-        "product_1": {
+        "product_KYdy8f": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "striped-skirt-and-top"
           }
         },
-        "product_2": {
+        "product_Vnr7m8": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "dark-winter-jacket"
           }
         },
-        "product_3": {
+        "product_awFhJY": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "floral-white-top"
           }
         },
-        "product_4": {
+        "product_KM9bRK": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "classic-leather-jacket"
           }
         },
-        "product_5": {
+        "product_mfBUrk": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "blue-silk-tuxedo"
           }
         },
-        "product_6": {
+        "product_77Uf6H": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "black-leather-bag"
           }
         }
       },
-
       "block_order": [
-        "product_1",
-        "product_2",
-        "product_3",
-        "product_4",
-        "product_5",
-        "product_6"
-      ]
+        "product_KYdy8f",
+        "product_Vnr7m8",
+        "product_awFhJY",
+        "product_KM9bRK",
+        "product_mfBUrk",
+        "product_77Uf6H"
+      ],
+      "name": "Gift Guide Grid (Custom)",
+      "settings": {
+        "heading-text": "Tisso vision in the wild"
+      }
     }
   },
-
   "order": [
     "banner",
     "grid"
