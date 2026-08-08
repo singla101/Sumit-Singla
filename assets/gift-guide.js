@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   if (window.giftGuideInitialized) return;
-window.giftGuideInitialized = true;
+  window.giftGuideInitialized = true;
   const plusIcons = document.querySelectorAll('.plus-icon');
   const modal = document.getElementById('productModal');
   const closeModal = modal.querySelector('.close');
